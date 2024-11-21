@@ -94,8 +94,39 @@ def change_file_dates(file_path, date_string, time_string):
         # Combine date and time
         mod_datetime = datetime.combine(input_date.date(), input_time)
 
-        # Set creation date to 17 hours and 13 minutes before modification date
-        creation_datetime = mod_datetime - timedelta(hours=17, minutes=13)
+        # Prompt for created date preference
+        created_choice = (
+            input(
+                "Would you like to change the Created Date? If no, it will automatically make it 17 hours and 13 minutes before the modified date. (Y/N): "
+            )
+            .strip()
+            .upper()
+        )
+
+        if created_choice == "Y":
+            # Get custom creation date and time
+            created_date = input("Enter creation date (MMDDYYYY or 'today'): ").strip()
+            created_time = input("Enter creation time (HHMM or 'now'): ").strip()
+
+            # Parse creation date
+            if created_date.lower() == "today":
+                created_input_date = datetime.today()
+            else:
+                created_input_date = datetime.strptime(created_date, "%m%d%Y")
+
+            # Parse creation time
+            if created_time.lower() == "now":
+                created_input_time = datetime.now().time()
+            else:
+                created_input_time = parse_time(created_time)
+
+            # Combine creation date and time
+            creation_datetime = datetime.combine(
+                created_input_date.date(), created_input_time
+            )
+        else:
+            # Use original 17h13m rule
+            creation_datetime = mod_datetime - timedelta(hours=17, minutes=13)
 
         # Convert dates to timestamps
         mod_timestamp = mod_datetime.timestamp()
