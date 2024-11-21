@@ -28,7 +28,7 @@
 - **Compatible with Windows:** Specifically designed for Windows systems, ensuring smooth operation.
 
 ## Usage Instructions
-1. Download the executable (`File.Date.Changer.exe`) from the [Releases](https://github.com/gnhen/File-Date-Edit/releases) tab.
+1. Download the executable (`File-Date-Changer.exe`) from the [Releases](https://github.com/gnhen/File-Date-Edit/releases) tab.
 3. Run the executable and follow the interactive prompts to update your file's metadata.
 4. Press `Q` at any point to exit the program.
 
