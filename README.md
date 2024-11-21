@@ -46,11 +46,20 @@
    ```
    Enter the time (e.g., 1138pm, 113832pm, or 'now'): 103030am
    ```
-5. The script confirms success:
+5. Choose whether to customize the creation date:
+   ```
+   Would you like to change the Created Date? If no, it will automatically make it 17 hours and 13 minutes before the modified date. (Y/N): Y
+   ```
+6. If Y, enter creation date and time:
+   ```
+   Enter creation date (MMDDYYYY or 'today'): 11202024
+   Enter creation time (HHMM or 'now'): 0515pm
+   ```
+7. The script confirms success:
    ```
    Successfully updated file dates for C:\example\file.txt
    Modification Date/Time: 11/21/2024 10:30:00 AM
-   Creation Date/Time: 11/20/2024 05:17:00 PM
+   Creation Date/Time: 11/20/2024 05:15:00 PM
    ```
 
 ## Requirements
