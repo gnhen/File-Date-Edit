@@ -1,4 +1,4 @@
-# convertEXE.py
+# File Date Editor
 
 ## Overview
 `convertEXE.py` is a Python utility designed to modify the creation and modification dates of files on a Windows system. This script allows users to specify a date and time for the file attributes, giving flexibility in managing file metadata. The tool also includes intelligent parsing for various time formats and automates time adjustments. I'd love to make a web version but I am not spending any money on it.
